@@ -53,6 +53,24 @@
             align-items: center;
             margin: 20px 0;
         }
+        .slide {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    flex: 1;
+}
+
+.qr-code {
+    width: 150px;
+    text-align: center;
+}
+
+.qr-code img {
+    width: 100%;
+    height: auto;
+}
     </style>
 </head>
 <body>
@@ -63,13 +81,17 @@
         </div>
 
         <div class="slide">
-            <h1>Course Overview</h1>
-            <ul>
-                <li>Introduction to NLP and its applications</li>
-                <li>Setting up the working environment</li>
-                <li>Text preprocessing techniques</li>
-                <li>Practical exercise: Preprocessing pipeline for tweet corpus</li>
-            </ul>
+            <div class="content">
+                <h1>Introduction to NLP and Text Preprocessing</h1>
+                <h2>Session 1</h2>
+                <h3>Natural Language Processing Course</h3>
+                <p class="author">Dr. [Your Name]</p>
+                <p class="institution">[Your University/Institution]</p>
+            </div>
+            <div class="qr-code">
+                <img src="path_to_your_qr_code.png" alt="Course QR Code">
+                <p>Scan for course materials</p>
+            </div>
         </div>
 
         <div class="slide">
