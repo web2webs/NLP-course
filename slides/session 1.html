@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to NLP and Text Preprocessing</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            padding: 50px;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+        }
+        .slide.active {
+            display: block;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #34495e;
+        }
+        ul {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        button {
+            font-size: 1em;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .image-placeholder {
+            width: 300px;
+            height: 200px;
+            background-color: #bdc3c7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="slideContainer">
+        <div class="slide active">
+            <h1>Introduction to NLP and Text Preprocessing</h1>
+            <h2>Session 1 - Natural Language Processing Course</h2>
+        </div>
+
+        <div class="slide">
+            <h1>Course Overview</h1>
+            <ul>
+                <li>Introduction to NLP and its applications</li>
+                <li>Setting up the working environment</li>
+                <li>Text preprocessing techniques</li>
+                <li>Practical exercise: Preprocessing pipeline for tweet corpus</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h1>What is NLP?</h1>
+            <ul>
+                <li>Definition: Interaction between computers and human language</li>
+                <li>Interdisciplinary field: Linguistics, Computer Science, AI</li>
+            </ul>
+            <div class="image-placeholder">Visual representation of NLP components</div>
+        </div>
+
+        <div class="slide">
+            <h1>Applications of NLP</h1>
+            <ul>
+                <li>Machine Translation</li>
+                <li>Sentiment Analysis</li>
+                <li>Chatbots and Virtual Assistants</li>
+                <li>Information Retrieval</li>
+                <li>Text Summarization</li>
+            </ul>
+            <div class="image-placeholder">Icons for NLP applications</div>
+        </div>
+
+        <div class="slide">
+            <h1>Setting Up Your NLP Toolkit</h1>
+            <ul>
+                <li>Python: The foundation of our NLP work</li>
+                <li>NLTK (Natural Language Toolkit): Comprehensive NLP library</li>
+                <li>spaCy: Industrial-strength NLP library</li>
+            </ul>
+            <div class="image-placeholder">Logos of Python, NLTK, and spaCy</div>
+        </div>
+
+        <div class="slide">
+            <h1>Text Preprocessing Overview</h1>
+            <ul>
+                <li>Cleaning and standardizing text data</li>
+                <li>Improving model performance</li>
+                <li>Reducing noise and irrelevant information</li>
+            </ul>
+            <div class="image-placeholder">Before/After comparison of raw text vs. preprocessed text</div>
+        </div>
+
+        <div class="slide">
+            <h1>Tokenization</h1>
+            <ul>
+                <li>Definition: Breaking text into individual units (tokens)</li>
+                <li>Types of tokenization:
+                    <ul>
+                        <li>Word tokenization</li>
+                        <li>Sentence tokenization</li>
+                    </ul>
+                </li>
+                <li>Challenges: Contractions, hyphenated words, URLs</li>
+            </ul>
+            <div class="image-placeholder">Visual example of tokenization</div>
+        </div>
+
+        <div class="slide">
+            <h1>Text Normalization</h1>
+            <ul>
+                <li>Converting text to a standard format</li>
+                <li>Techniques:
+                    <ul>
+                        <li>Lowercase conversion</li>
+                        <li>Punctuation removal</li>
+                        <li>Number handling</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="image-placeholder">Raw text → Normalized text example</div>
+        </div>
+
+        <div class="slide">
+            <h1>Stop Words Removal</h1>
+            <ul>
+                <li>Definition: Eliminating common, low-information words</li>
+                <li>Benefits: Reduces noise, focuses on meaningful content</li>
+                <li>Caution: Context-dependent, may remove important words in some cases</li>
+            </ul>
+            <div class="image-placeholder">Word cloud before and after stop word removal</div>
+        </div>
+
+        <div class="slide">
+            <h1>Stemming vs. Lemmatization</h1>
+            <ul>
+                <li>Stemming: Reducing words to their root form (often crude)</li>
+                <li>Lemmatization: Reducing words to their base form (dictionary form)</li>
+                <li>Comparison:
+                    <ul>
+                        <li>Stemming: Faster, but can produce non-words</li>
+                        <li>Lemmatization: More accurate, but slower</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="image-placeholder">Table comparing stemming and lemmatization results</div>
+        </div>
+
+        <div class="slide">
+            <h1>Hands-on: Tweet Preprocessing Pipeline</h1>
+            <ul>
+                <li>Goal: Create a preprocessing pipeline for a tweet corpus</li>
+                <li>Steps:
+                    <ol>
+                        <li>Load tweet data</li>
+                        <li>Tokenize</li>
+                        <li>Normalize</li>
+                        <li>Remove stop words</li>
+                        <li>Apply stemming or lemmatization</li>
+                    </ol>
+                </li>
+                <li>Tools: Python, NLTK, spaCy</li>
+            </ul>
+            <div class="image-placeholder">Flowchart of the preprocessing pipeline</div>
+        </div>
+
+        <div class="slide">
+            <h1>Wrapping Up</h1>
+            <ul>
+                <li>Recap of key concepts</li>
+                <li>Importance of preprocessing in NLP tasks</li>
+                <li>Preview of next session</li>
+                <li>Questions?</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button onclick="prevSlide()">Previous</button>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+    </script>
+</body>
+</html>
